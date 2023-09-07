@@ -8,6 +8,7 @@ namespace Research_management.API.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) {}
 
         public DbSet<Researcher> Researchers { get; set; }
+        public DbSet<InvestigationProject> investigationProjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
