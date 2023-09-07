@@ -21,7 +21,7 @@ namespace Research_management.API.Controllers
         [HttpGet("{Id}")]
         public async Task<ActionResult> Get(int Id)
         {
-            var InvestigationProject = await _context.investigationProjects.FirstOrDefaultAsync(x => x.Id == Id);
+            var InvestigationProject = await _context.InvestigationProjects.FirstOrDefaultAsync(x => x.Id == Id);
 
             if(InvestigationProject == null)
             {
@@ -37,7 +37,7 @@ namespace Research_management.API.Controllers
         [HttpGet]
         public async Task<ActionResult> GetList()
         {
-            var InvestigationProjectsList = await _context.investigationProjects.ToListAsync();
+            var InvestigationProjectsList = await _context.InvestigationProjects.ToListAsync();
 
             if (InvestigationProjectsList.Count == 0)
             {
@@ -63,7 +63,7 @@ namespace Research_management.API.Controllers
         [HttpDelete("{Id}")]
         public async Task<ActionResult> Delete(int Id)
         {
-            var InvestigationProject = await _context.investigationProjects.FirstOrDefaultAsync(x=>x.Id == Id);
+            var InvestigationProject = await _context.InvestigationProjects.FirstOrDefaultAsync(x=>x.Id == Id);
 
             if(InvestigationProject == null) {
 
