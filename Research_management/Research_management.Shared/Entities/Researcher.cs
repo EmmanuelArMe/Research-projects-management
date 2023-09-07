@@ -11,13 +11,13 @@ namespace Research_management.Shared.Entities
         [Required(ErrorMessage = "Field {0} is required.")]
         public string Name { get; set; } = null!;
 
-        [Required]
+        [Required(ErrorMessage = "Please insert a institutional affiliation ")]
         public string InstitutionalAffiliation { get; set; } = null!;
 
-        [Required]
+        [Required(ErrorMessage = "Please insert a specialization ")]
         public string Specialization { get; set; } = null!;
 
-        [Required]
+        [Required(ErrorMessage = "Please insert a role ")]
         public string Role { get; set; } = null!;   
     }
 }
